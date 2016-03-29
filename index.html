@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Pomodoro Clock</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <h1>Pomodoro Clock</h1>
+
+  <div class="controlBoxClass noselect">
+
+    <div class="controlBox">
+      <p>BREAK LENGTH</p>
+      <button class="minusDiv" id="minusTextBreak">-</button>
+      <div class="timeSetDiv"><span id="timeSetTextBreak" class="timeSetText">5</span></div>
+      <button class="plusDiv" id="plusTextBreak">+</button>
+    </div>
+
+    <div class="controlBox">
+      <p>SESSION LENGTH</p>
+      <button class="minusDiv" id="minusTextSession">-</button>
+      <div class="timeSetDiv"><span id="timeSetTextSession" class="timeSetText">25</span></div>
+      <button class="plusDiv" id="plusTextSession">+</button>
+    </div>
+
+  </div>
+
+  <div id="resetButton" class="noselect"><i class="fa fa-repeat"></i><br> RESET</div>
+  <button id="timerButton">Session<br/>25 min</button>
+  
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+  <script src="js/index.js"></script>
+
+</body>
+
+</html>
