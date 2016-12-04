@@ -65,23 +65,27 @@ function displayBreakInfo() {
 };
 
 function showProgress(mode, secs, secsTotal) {
+  
   var percentFillTemp = 1 - (secs / (secsTotal * 60));
   percentFillTemp *= 100;
   percentFill = percentFillTemp + "%";
   percentFill2 = 100 - percentFillTemp;
   percentFill2 += "%";
+  
   var fillColor = undefined;
   if (mode === "session") {
     fillColor = greenBorderColor;
   } else if (mode === "break") {
     fillColor = redBorderColor;
   }
+  
   var backgroundColor;
   if (mode === "session") {
     backgroundColor = greenColor;
   } else if (mode === "break") {
     backgroundColor = redColor;
   }
+  
   var backgroundFill = undefined;
   if (percentFillTemp <= 50) {
     backgroundFill = "linear-gradient(to bottom, " + backgroundColor + " " + percentFill2 + ", " + fillColor + " " + percentFill + ")";
@@ -96,21 +100,25 @@ function showProgress(mode, secs, secsTotal) {
 $(".controlBox button").click(function(event) {
   console.log(event.target);
   if (!timerActive) {
+    
     if (event.target.id === "plusTextSession") {
       if (sessionMins < 99) {
         sessionMins++;
       }
     }
+    
     if (event.target.id === "minusTextSession") {
       if (sessionMins > 1) {
         sessionMins--;
       }
     }
+    
     if (event.target.id === "plusTextBreak") {
       if (breakMins < 99) {
         breakMins++;
       }
     }
+    
     if (event.target.id === "minusTextBreak") {
       if (breakMins >= 1) {
         breakMins--;
